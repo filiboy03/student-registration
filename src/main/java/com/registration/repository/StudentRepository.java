@@ -9,4 +9,8 @@ import com.registration.model.Student;
 @Repository
 public interface StudentRepository extends JpaRepository<Student,Long> {
 
+
+	
+	  
+	
 }
