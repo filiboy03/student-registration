@@ -19,7 +19,7 @@ public class StudentJDBCDAO {
 	    public List<StudentDTO> getStudentsbyCourse(String courseName) {
 		  
 	   return jdbcTemplate.query("Select studentName From student s Inner Join stud_course sc On sc.studentId= s.studentId Inner Join course c On c.courseId = sc.courseId "
-		  		+ "where c.courseName=? order by studentName DESC",  new Object[] { courseName }, new StudentDTORowMapper());
+		  		+ "where c.courseName=? order by studentName ASC",  new Object[] { courseName }, new StudentDTORowMapper());
 		  
 	  }
 	
